@@ -6,7 +6,7 @@ export async function POST(req: Request) {
     const { context } = await req.json()
 
     const { text } = await generateText({
-      model: openai("gpt-4"),
+      model: openai("gpt-3.5-turbo"),
       system: `Tu es un assistant qui aide à rédiger des messages pour demander de l'aide à des proches.
       Génère un message bienveillant, authentique et pas trop dramatique.
       Le message doit être court (2-4 phrases), direct mais doux.

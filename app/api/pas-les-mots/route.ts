@@ -6,7 +6,7 @@ export async function POST(req: Request) {
     const { input } = await req.json()
 
     const { text } = await generateText({
-      model: openai("gpt-4"),
+      model: openai("gpt-3.5-turbo"),
       system: `Tu es un assistant empathique qui aide les personnes à exprimer leurs émotions.
       À partir d'un mot, d'une sensation ou même d'une absence d'input, génère une interprétation bienveillante de ce que la personne pourrait ressentir.
       Utilise la première personne (je) comme si c'était la personne qui parlait.
