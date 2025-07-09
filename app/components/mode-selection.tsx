@@ -2,10 +2,10 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Heart, MessageCircle, HelpCircle, ArrowLeft } from "lucide-react"
+import { Heart, MessageCircle, HelpCircle, ArrowLeft, Phone } from "lucide-react"
 
 interface ModeSelectionProps {
-  onSelectMode: (mode: "auto-apaisement" | "demander-aide" | "pas-les-mots") => void
+  onSelectMode: (mode: "auto-apaisement" | "demander-aide" | "pas-les-mots" | "appeler-urgence") => void
   onBack: () => void
 }
 
@@ -35,6 +35,16 @@ export function ModeSelection({ onSelectMode, onBack }: ModeSelectionProps) {
       gradient: "from-purple-200 to-violet-200",
       hoverGradient: "hover:from-purple-300 hover:to-violet-300",
     },
+
+    {
+      id: "appeler-urgence" as const,
+      title: "Appeler un proche / urgence",
+      description: "Appelle un contact d'urgence ou les secours",
+      icon: Phone,
+      gradient: "from-red-200 to-orange-200",
+      hoverGradient: "hover:from-red-300 hover:to-orange-300",
+    },
+    
   ]
 
   return (

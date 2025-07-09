@@ -45,3 +45,4 @@ OBJECTIF : Aider la personne à retrouver un sentiment de calme et de sécurité
     return new Response("Erreur interne", { status: 500 })
   }
 }
+

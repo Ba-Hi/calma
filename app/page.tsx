@@ -7,8 +7,9 @@ import { ModeSelection } from "./components/mode-selection"
 import { AutoApaisement } from "./components/auto-apaisement"
 import { DemanderAide } from "./components/demander-aide"
 import { PasLesMots } from "./components/pas-les-mots"
+import { AppelerUrgence } from "./components/appeler-urgence"
 
-type Screen = "welcome" | "modes" | "auto-apaisement" | "demander-aide" | "pas-les-mots"
+type Screen = "welcome" | "modes" | "auto-apaisement" | "demander-aide" | "pas-les-mots" | "appeler-urgence"
 
 export default function CalmaApp() {
   const [currentScreen, setCurrentScreen] = useState<Screen>("welcome")
@@ -51,6 +52,9 @@ export default function CalmaApp() {
       case "pas-les-mots":
         return <PasLesMots onBack={() => setCurrentScreen("modes")} />
 
+      case "appeler-urgence":
+          return <AppelerUrgence onBack={() => setCurrentScreen("modes")} />
+        
       default:
         return null
     }
